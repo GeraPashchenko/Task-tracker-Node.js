@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Task Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <a id="home" class="bttns" href="/">Back to home</a>
+    <a id="updateUsers" class="bttns" href="/updateUsers">Update users</a>
+    <% users.forEach((user,i) => {%>
+    <div class="user" id="user<%= i %>">
+        <span>ID: <span id="id<%= i %>"><%= user.user_id %></span></span>
+        <span>First name: <span id="first_name<%= i %>"><%= user.first_name %></span></span>
+        <span>Last name: <span id="last_name<%= i %>"><%= user.last_name %></span></span>
+
+        <form action="/editUserForm">
+            <input class="bttns" id="editTask" type="submit" value="Edit">
+            <input type="hidden" name="userContent" id="UserContent<%= i %>"
+                value="<%= user.user_id %>,<%= user.first_name %>,<%= user.last_name %>">
+        </form>
+
+        <form action="/deleteUser">
+            <input id="deleteUser" class="bttns" type="submit" value="Delete">
+            <input type="hidden" name="userContent" id="UserContent<%= i %>"
+                value="<%= user.user_id %>,<%= user.first_name %>,<%= user.last_name %>">
+        </form>
+    </div>
+    <%  }) %>
+</body>
+
+</html>

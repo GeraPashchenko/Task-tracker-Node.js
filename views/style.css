@@ -1,0 +1,36 @@
+.bttns{
+    outline: none;
+    display: inline-block;
+    background-color: rgb(165, 154, 154);
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    text-decoration: none;
+    text-align: center;
+    padding: 5px;
+    border: 1px solid grey;
+}
+
+.bttns:hover{
+    background-color: rgb(15, 9, 9);
+    color: white;
+}
+#addTask_form,#addUser_form{
+    
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    /* width: 100%; */
+}
+#task_title_input, #task_description_input{
+    margin: 5px;
+    font-size: 20px;
+}
+
+.task,.user{
+    margin: 20px;
+    border: 1px solid grey;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}

@@ -1,0 +1,32 @@
+[
+    {
+        "user_id": 2,
+        "first_name": "Nikita",
+        "last_name": "Petrov",
+        "register_timestamp": 1586211308
+    },
+    {
+        "user_id": 3,
+        "first_name": "Maksim",
+        "last_name": "Nikityk",
+        "register_timestamp": 1586211354
+    },
+    {
+        "user_id": 4,
+        "first_name": "Valeriy",
+        "last_name": "Hrinko",
+        "register_timestamp": 1586211354
+    },
+    {
+        "user_id": 5,
+        "first_name": "Hleb",
+        "last_name": "Panchenko",
+        "register_timestamp": 1586358417
+    },
+    {
+        "user_id": 6,
+        "first_name": "Denis",
+        "last_name": "Koshkin2",
+        "register_timestamp": 1586422024
+    }
+]

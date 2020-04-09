@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Task Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <form action="/editTask">
+        <input type="hidden" name="id" id="id_input" value="<%= task.id %>">
+        <input type="text" name="title" id="title_input" value="<%= task.title %>" required>
+        <input type="text" name="description" id="description_input" value="<%= task.description %>" required>
+
+        <select name="status" id="status_s">
+            <option selected value="<%= task.status %>"><%= task.status %></option>
+            <option value="View">View</option>
+            <option value="In Progress">In Progress</option>
+            <option value="Done">Done</option>
+        </select>
+        
+        <select name="executor_id" id="id_executor">
+            <% users.forEach( function(user){ %>            
+            <option value="<%= user.user_id %>,<%= user.first_name + ' ' + user.last_name %>"><%= user.first_name + " " + user.last_name %></option>
+            <% }); %>
+        </select>  
+        <input class="bttns" type="submit" value="Edit">
+    </form>
+
+</body>
+
+</html>

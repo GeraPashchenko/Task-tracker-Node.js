@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Task Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <form action="/editUser">
+        <input type="hidden" name="start_first_name" id="start_title_input" value="<%= user.first_name %>" required>
+        <input type="hidden" name="start_last_name" id="start_description_input" value="<%= user.last_name %>" required>
+        <input type="text" name="first_name" id="title_input" value="<%= user.first_name %>" required>
+        <input type="text" name="last_name" id="description_input" value="<%= user.last_name %>" required>
+        <input type="submit" value="Edit">
+    </form>
+</body>
+
+</html>

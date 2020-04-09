@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Task Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <a id="home" class="bttns" href="/">Back to home</a>
+    <a id="updateTasks" class="bttns" href="/updateTasks">Update tasks</a>
+    <a id="sortByStatus" class="bttns" href="/sortByStatus">Sort by status</a>
+    <a id="sortById" class="bttns" href="/sortById">Sort by id</a>
+
+    <% tasks.forEach((task,i) => {%>
+    <div class="task" id="task<%= i %>">
+        <span>Title: <span id="title<%= i %>"><%= task.title %></span></span>
+        <span>Description: <span id="description<%= i %>"><%= task.description %></span></span>
+        <span>Status: <span id="status<%= i %>"><%= task.status %></span></span>
+        <span>Executor: <span id="executor<%= i %>"></span><%= task.executor %></span>
+        <form action="/editTaskForm">
+            <input class="bttns" id="editTask" type="submit" value="Edit">
+            <input type="hidden" name="taskContent" id="taskContent<%= i %>"
+                value="<%= task.title %>,<%= task.description %>,<%= task.status %>,<%= task.executor %>,<%= task.id %>">
+        </form>
+        <form action="/deleteTask">
+            <input id="deleteTask" class="bttns" type="submit" value="Delete">
+            <input type="hidden" name="taskContent" id="taskContent<%= i %>"
+                value="<%= task.title %>,<%= task.description %>,<%= task.status %>,<%= task.executor %>,<%= task.id %>">
+        </form>
+    </div>
+
+    <%  }) %>
+
+</body>
+
+</html>
